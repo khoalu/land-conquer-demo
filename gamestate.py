@@ -81,8 +81,6 @@ class Board:
                     cells[i][j].color = Color.NONE
                     cells[i][j].has_wall = True
                     
-                    # not in demo
-                    cells[i][j].has_star = False
                     
                 zone.full = True
             else: # one color claim this zone
@@ -90,11 +88,6 @@ class Board:
                     if cell_cnt >= zone.max_cells:
                         for i, j in zone.indices:
                             cells[i][j].color = [Color.RED, Color.BLUE][color]
-                            
-                            # not in demo
-                            if cells[i][j].has_star:
-                                cells[i][j].has_star = False
-                                players[color].get_star()
                                 
                             cells[i][j].has_wall = False
                         
@@ -133,9 +126,6 @@ class Player:
         
     def __repr__(self):
         return "{} | {}".format((self.land_point, self.cell_point), (self.avail_moves, self.avail_wall_break))
-    
-    def get_star(self):
-        self.avail_moves *= 2
             
     def display(self):
         print()
@@ -247,11 +237,7 @@ class GameState:
                     if cells[i][j].has_wall: 
                         pass # nothing happened 
                       
-                    # not in demo
-                    if cells[i][j].has_star:
-                        cells[i][j].has_star = False
-                        for color in range(2):
-                            self.players[color].get_star() # both player get the star
+
                 else: # just one player move into this cell
                     for color in range(2):
                         if buff[color][i][j] == 1:
@@ -264,10 +250,7 @@ class GameState:
                                 else:
                                     can_move = False
                                     
-                            # not in demo
-                            if cells[i][j].has_star:
-                                cells[i][j].has_star = False
-                                self.players[color].get_star()
+                            
                             
                             if can_move:
                                 cells[i][j].color = color

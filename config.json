@@ -4,7 +4,7 @@
     "max_turn": 100,
     "initial_moves": 2,
     "initial_drills": 2,
-    "layout": "2.map",
+    "layout": "1.map",
     "draw_cell_point": false,
     "time_per_display_phase": 0.1
 }

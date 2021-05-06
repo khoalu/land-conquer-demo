@@ -216,10 +216,7 @@ class Game:
                 
                 if cells[i][j].has_wall:
                     pygame.draw.rect(screen, self.C_WALLCOLOR, (left + j * cell_size+3, top + i * cell_size+3, cell_size-6, cell_size-6))
-                    
-                if cells[i][j].has_star:
-                    pygame.draw.rect(screen, self.C_STARCOLOR, (left + j * cell_size+5, top + i * cell_size+5, cell_size-10, cell_size-10))
-                    
+                        
                 if self.conf_obj["draw_cell_point"]:
                     img_point = self.font_point.render('{}'.format(cells[i][j].point), True, self.C_BLACK)
                     rect = img_point.get_rect()
