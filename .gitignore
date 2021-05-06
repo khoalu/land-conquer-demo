@@ -1,0 +1,5 @@
+__pycache__/
+.vscode
+zz_gameflow.txt
+zz_test.py
+zz_genmap.py
