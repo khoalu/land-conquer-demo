@@ -1,5 +1,5 @@
 # LAND CONQUER - Trình chấm
-_Note_: Hãy đọc đề trước khi đọc file này
+_Note_: Hãy đọc đề trước khi đọc file này  
 _Note 2_: Toàn bộ các lệnh dưới đây đều được test trên Windows 10. Nếu thí sinh nào dùng Linux và không chạy được các lệnh dưới hãy liên hệ BTC để được giải đáp. 
 ## Requirement
 1. [python3](https://www.python.org/)
